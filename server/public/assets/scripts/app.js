@@ -11,9 +11,18 @@ $(document).ready(function(){
     $("#divide").on('click', function(){
         clickedDivide();
     });
+    $("#clear").on('click', function(){
+        clearFields();
+    });
+
+
 });
 
-
+function clearFields(){
+    $("#inputValueOne").find("input[type=number]").val("");
+    $("#inputValueTwo").find("input[type=number]").val("");
+    $("#answer").empty();
+}
 
 function clickedAdd(){
     $.ajax({
@@ -62,15 +71,15 @@ function clickPostDataAdd() {
 
     $.each($("#inputValueOne").serializeArray(), function (i, field) {
         inputOne = field.value;
+        $("#inputValueOne").find("input[type=number]").val("");
     });
 
-    $("#inputValueOne").find("input[type=number]").val("");
 
     $.each($("#inputValueTwo").serializeArray(), function (i, field) {
         inputTwo = field.value;
+        $("#inputValueTwo").find("input[type=number]").val("");
     });
 
-    $("#inputValueTwo").find("input[type=number]").val("");
 
     $.ajax({
         type: "POST",
@@ -100,15 +109,15 @@ function clickPostDataSubtract() {
 
     $.each($("#inputValueOne").serializeArray(), function (i, field) {
         inputOne = field.value;
+        $("#inputValueOne").find("input[type=number]").val("");
     });
 
-    $("#inputValueOne").find("input[type=number]").val("");
 
     $.each($("#inputValueTwo").serializeArray(), function (i, field) {
         inputTwo = field.value;
+        $("#inputValueTwo").find("input[type=number]").val("");
     });
 
-    $("#inputValueTwo").find("input[type=number]").val("");
 
     $.ajax({
         type: "POST",
@@ -138,15 +147,15 @@ function clickPostDataMultiply() {
 
     $.each($("#inputValueOne").serializeArray(), function (i, field) {
         inputOne = field.value;
+        $("#inputValueOne").find("input[type=number]").val("");
     });
 
-    $("#inputValueOne").find("input[type=number]").val("");
 
     $.each($("#inputValueTwo").serializeArray(), function (i, field) {
         inputTwo = field.value;
+        $("#inputValueTwo").find("input[type=number]").val("");
     });
 
-    $("#inputValueTwo").find("input[type=number]").val("");
 
     $.ajax({
         type: "POST",
@@ -176,15 +185,15 @@ function clickPostDataDivide() {
 
     $.each($("#inputValueOne").serializeArray(), function (i, field) {
         inputOne = field.value;
+        $("#inputValueOne").find("input[type=number]").val("");
     });
 
-    $("#inputValueOne").find("input[type=number]").val("");
 
     $.each($("#inputValueTwo").serializeArray(), function (i, field) {
         inputTwo = field.value;
+        $("#inputValueTwo").find("input[type=number]").val("");
     });
 
-    $("#inputValueTwo").find("input[type=number]").val("");
 
     $.ajax({
         type: "POST",
